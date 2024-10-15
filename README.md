@@ -32,38 +32,6 @@ The main components of the DoomMaker engine are located in two core files:
    - Tools for specifying player spawn points and enemy placement.
    - Output functionality to generate ready-to-play maps.
 
-### Usage
-
-#### 1. Creating a Map
-
-You can use the map creation utility provided in `map_creator_2.py` to design your game levels. Here's an example of how to create a simple room with a player spawn point:
-
-```python
-from map_creator_2 import MapCreator
-
-# Initialize the map creator
-map = MapCreator(width=100, height=100)
-
-# Create a simple room
-map.create_room(x=10, y=10, width=20, height=20)
-
-# Set the player spawn point
-map.set_player_spawn(x=15, y=15)
-
-# Export the map to the engine-readable format
-map.export_map("my_first_map.doom")
-```
-
-#### 2. Running the Game
-
-Once your map is created, you can load it into the DoomMaker engine using `DOOMPY3.py`:
-
-```bash
-python DOOMPY3.py --map my_first_map.doom
-```
-
-This will launch the game with your custom map, allowing you to explore and test it in the engine.
-
 ### Customizing the Engine
 
 DoomMaker is designed to be flexible and extendable. If you want to modify the game mechanics, AI behavior, or rendering, you can dive into `DOOMPY3.py` to tweak the engine. For example, you could add new weapon types, enemy behaviors, or even entirely new gameplay mechanics.
